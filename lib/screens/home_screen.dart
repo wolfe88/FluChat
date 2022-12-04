@@ -1,11 +1,15 @@
+import 'package:fluchat/helpers.dart';
 import 'package:fluchat/pages/calls_page.dart';
 import 'package:fluchat/pages/contacts_page.dart';
 import 'package:fluchat/pages/messages_page.dart';
 import 'package:fluchat/pages/notifications_page.dart';
 import 'package:fluchat/theme.dart';
+import 'package:fluchat/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
+import '../widgets/avatar.dart';
 
 // int pageIndex0 = 0;
 
@@ -55,13 +59,33 @@ class _HomeScreenState extends State<HomeScreen> {
               value,
               style: const TextStyle(
                 letterSpacing: 1.4,
-                height: 4,
+                height: 1,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),
             );
           },
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 18.0),
+            child: IconButton(
+              icon: Avatar.small(url: Helpers.randomPictureUrl()),
+              onPressed: () {},
+              splashRadius: 24,
+            ),
+          ),
+        ],
+        leading: Align(
+          alignment: Alignment.centerRight,
+          child: IconButton(
+            icon: Icon(Icons.search, color: Colors.white),
+            onPressed: () {},
+            // splashColor: Colors.red,
+            // highlightColor: Colors.red,
+            splashRadius: 24,
+          ),
         ),
       ),
       body: ValueListenableBuilder(

@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
       themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
       title: "FluChat",
       routerConfig: _router,
       // home: const HomeScreen(), //child appbar
