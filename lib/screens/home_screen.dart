@@ -80,8 +80,9 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Align(
           alignment: Alignment.centerRight,
           child: IconButton(
-            icon: Icon(Icons.search, color: Colors.white),
+            icon: const Icon(Icons.search, color: Colors.white),
             onPressed: () {},
+
             // splashColor: Colors.red,
             // highlightColor: Colors.red,
             splashRadius: 24,
